@@ -36,6 +36,8 @@ namespace Test.WebAppForAWS
 
             var result = valuesController.Get(1);
 
+            Assert.IsInstanceOfType(result, typeof(IEnumerable<string>));
+
             Assert.IsInstanceOfType(result, typeof(string));
             Assert.AreEqual("value", result);
 
